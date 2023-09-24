@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../styles/App.css';
 import Navbar from './Navbar';
 import { Routes, Route } from "react-router-dom";
@@ -13,7 +13,7 @@ const App = () => {
       <div className='container'>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/top-10" element={<Top cryptoArr={cryptoArr} />} /> {/* Pass cryptoArr as a prop to Top */}
+          <Route path="/top-10" element={<Top />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
