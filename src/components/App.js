@@ -1,16 +1,18 @@
-import React from 'react';
+import React from 'react'
 import '../styles/App.css';
 import Navbar from './Navbar';
 import { Routes, Route } from "react-router-dom";
 import Home from './Home';
-import Top from './Top'; // Import the Top component
+import Top from './Top';
 import Contact from './Contact';
 
 const App = () => {
+
   return (
     <div id="main">
       <Navbar />
-      <div className='container'>
+
+      <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/top-10" element={<Top />} />
@@ -18,7 +20,8 @@ const App = () => {
         </Routes>
       </div>
     </div>
-  );
+  )
 }
+
 
 export default App;
