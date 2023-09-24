@@ -7,16 +7,6 @@ import Top from './Top'; // Import the Top component
 import Contact from './Contact';
 
 const App = () => {
-  const [cryptoArr, setCryptoArr] = useState([]);
-
-  useEffect(() => {
-    // Fetch data from the API and set it in the state
-    fetch('https://api.coinlore.net/api/tickers/')
-      .then(response => response.json())
-      .then(data => setCryptoArr(data.data.slice(0, 10))) // Get the first 10 cryptos
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
-
   return (
     <div id="main">
       <Navbar />
